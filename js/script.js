@@ -90,6 +90,12 @@ $( document ).ready(function() {
 			$(this).removeClass("bg-warning");
 		});
 
+
+// test
+	 
+	// alert($('.carousel').carousel());
+// 
+
 	// 	About fuction $(".navbar").hover() showed  bellow :
 	//	This code hides navbar competely in order to make easier to watch photos, and read webpage. In one word site looks more beautiful.
 	// 	In order to make navbar vissably again you have to move mouse on top of page (hover navbar).
