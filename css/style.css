@@ -8,7 +8,8 @@ a:hover
 {
 	text-decoration: none;
 }
-html {
+html 
+{
   scroll-behavior: smooth;
 }
 /*
@@ -95,8 +96,52 @@ z-index: +1;
 transition-duration: 3s, 1s;
 transition-property: transform;
 }
+.smallable_3d_most_left
+{
+ -webkit-transform-style: preserve-3d; /* Safari 3-8  */    
+    -webkit-transform: rotateY(80deg) scale(0.9); /* Safari 3-8  */
+    transform-style: preserve-3d;
+    transform: rotateY(80deg);
+}
+.smallable_3d_left
+{
+ -webkit-transform-style: preserve-3d; /* Safari 3-8  */    
+    -webkit-transform: rotateY(45deg) scale(0.9); /* Safari 3-8  */
+    transform-style: preserve-3d;
+    transform: rotateY(45deg);
+}
+.smallable_3d_most_right
+{
+ -webkit-transform-style: preserve-3d; /* Safari 3-8  */    
+    -webkit-transform: rotateY(290deg) scale(0.9); /* Safari 3-8  */
+    transform-style: preserve-3d;
+    transform: rotateY(290deg);
+}
+.smallable_3d_right
+{
+ -webkit-transform-style: preserve-3d; /* Safari 3-8  */    
+    -webkit-transform: rotateY(335deg) scale(0.9); /* Safari 3-8  */
+    transform-style: preserve-3d;
+    transform: rotateY(335deg);
+}
+.smallable
+{
+ -webkit-transform-style: preserve-3d; /* Safari 3-8  */    
+    -webkit-transform: rotateY(335deg) scale(0.9); /* Safari 3-8  */
+    transform-style: preserve-3d;
+    transform: rotateY(335deg);
+}
+
+
+/* some pushing stuff
+*/
+
 
 /* some opacity class*/
+.show_animation
+{
+  opacity : 0 ; 
+}
 .opacity-0
 {
   /*
@@ -135,6 +180,62 @@ transition-property: transform;
   */
   opacity : 100 ;
 }
+.rotated-10
+{
+      -webkit-transform: rotateZ(10deg); /* Safari */
+      transform: rotateZ(10deg); /* Standard syntax */
+}
+.rotated-45
+{
+      -webkit-transform: rotateY(45deg); /* Safari */
+      transform: rotateY(45deg); /* Standard syntax */
+}
+.lay_down
+{
+      -webkit-transform-style: preserve-3d; /* Safari 3-8  */    
+    -webkit-transform: rotateX(80deg); /* Safari 3-8  */
+    transform-style: preserve-3d;
+    transform: rotateX(80deg);
+}
+.perspective-100
+{
+
+    -webkit-perspective: 1000px; /* Safari 4-8  */
+    perspective: 1000px;
+}
+.perspective-10
+{
+
+    -webkit-perspective: 100px; /* Safari 4-8  */
+    perspective: 100px;
+}
+
+.rotated-135
+{
+      -webkit-transform: rotateY(135deg); /* Safari */
+      transform: rotateY(135deg); /* Standard syntax */
+}
+.rotated-170
+{
+      -webkit-transform: rotateZ(170deg); /* Safari */
+      transform: rotateZ(170deg); /* Standard syntax */
+}
+.rotated-270
+{
+      -webkit-transform: rotateY(270deg); /* Safari */
+      transform: rotateY(270deg); /* Standard syntax */
+}
+.rotated-350
+{
+      -webkit-transform: rotateZ(350deg); /* Safari */
+      transform: rotateZ(350deg); /* Standard syntax */
+}
+.rotated-90
+{
+      -webkit-transform: rotateY(90deg); /* Safari */
+      transform: rotateY(90deg); /* Standard syntax */
+}
+
 @keyframes  opacity-anime{
     0% {
       opacity: 0;
@@ -166,13 +267,34 @@ It is used in script.js in $(window).scroll(function(){
     from {
       opacity: 0;
       transform: scale(0);
+      -webkit-transform: rotateY(90deg); /* Safari */
+      transform: rotateY(90deg); /* Standard syntax */
     }
     to {
       opacity: 1;
       transform: scale(1);
+      
     }
 }
 
+@keyframes  wake_up{
+/*
+It is animation that set elements on screen during scrolling
+It is used in script.js in $(window).scroll(function(){
+ $(window).scroll( in. /js/script.js
+*/
+    from {
+       -webkit-transform-style: preserve-3d; /* Safari 3-8  */    
+    -webkit-transform: rotateX(80deg); /* Safari 3-8  */
+    transform-style: preserve-3d;
+    transform: rotateX(80deg);
+    }
+    to {
+      opacity: 1;
+      transform: scale(1);
+      
+    }
+}
 @keyframes  backgound-move
 {
     /*
@@ -206,4 +328,32 @@ section
     animation-duration: 60s;
     animation-timing-function: linear;
     animation-iteration-count: infinite;
+}
+
+
+
+    /*
+    for slider History
+    */
+#custom-handle {
+    width: 3em;
+    height: 1.6em;
+    top: 50%;
+    margin-top: -.8em;
+    text-align: center;
+    line-height: 1.6em;
+}
+.d_test {
+  position: absolute;
+  transition: .5s all ease;
+  transform: rotateX(60deg) scale(0.7);
+  perspective: 900px;
+  box-shadow: 0px 20px 50px #555;
+  animation: entry 1s linear 1;
+}
+.d_test:hover {
+  cursor: pointer;
+  transform: rotate(0deg) scale(1) translateY(10px);
+  transition: .5s all ease;
+  z-index: 400;
 }
