@@ -228,6 +228,32 @@ Here you can find links to:
 
 On very bottom part of the page is cart with my name and mail, I would like to put there also link to my personal page , but it is not ready now. 
 
+## Mocking-up
+I used GIMP for mocking-up project, because I am familiar with this software and it is availabe for Linux. 
+I think basamiq could be ok, but
+* has very limited options, comparing to https://moqups.com/ and other commercial solutions
+* is not free - free version has some limitations
+* is not availabe for linux (wine version only)
+
+Chosing gimp alowed me to mock-up project quite fast.
+Here you can see all png images of mock-up:
+![Page 1](the doors_mock_up/1.png)
+Page 1
+
+![Page 2](the doors_mock_up/2.png)
+Page 2
+
+![Page 3](the doors_mock_up/3.png)
+Page 3
+
+![Page 4](the doors_mock_up/4.png)
+Page 4
+
+![Page 5](the doors_mock_up/5.png)
+Page 5
+
+![Page 6](the doors_mock_up/6.png)
+Page 6
 
 
 ## What next?
