@@ -54,7 +54,11 @@ Example of using zoomable class on photo
 
 Thanks to zoomable class hovering each element makes it bigger so it improve user experience. 
 Classes are in css/style.css file under:
-class zoomable - it allows us to zoom element.
+
+```css
+/* class zoomable - it allows us to zoom element.
+```
+
 I prepared 4 clases:
 * zoomable, it makes element 10% bigger
 * zoomable-150, it make element even bigger
@@ -68,7 +72,18 @@ Example of zoomable and easy_read class
 
 When you hover text – the background of text become white and text become black. I hope it makes text more visible and can be helpful – especially for older people that can not see very well. As we know The Doors is rock band from 60’ so it is like that someone that is 70-100 years old can use this webpage, usually those people like easy to read text.
 Class easy_read is in css/style.css file under:
+
+```css
+/*
 Easy read- it changes colors to black and white when hover in order to make text easier to read
+*/
+.easy_read:hover
+{
+  color:black;
+  background-color: white;
+}
+```
+
 
 ### Colors 
 
@@ -76,12 +91,13 @@ Easy read- it changes colors to black and white when hover in order to make text
 Colors used on project
 
 Web page uses colors that were popular in 60’ , particularly :
-	* burn_sienna (#882D17),
-	* harvest_gold (#E6A817),
-	* avocado (#568203),
-	* teak 	(#A38B5F),
-	* cerulean_blue (#2a52be),
-	* coppertone (#b87333),
+* **burn_sienna** (#882D17)
+* **harvest_gold** (#E6A817)
+* **avocado** (#568203)
+* **teak** 	(#A38B5F)
+* **cerulean_blue** (#2a52be)
+* **coppertone** (#b87333)
+
 The information's about colors I got from this web page: https://juiceboxinteractive.com/blog/color/ 
 
 
