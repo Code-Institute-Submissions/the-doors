@@ -39,6 +39,9 @@ Open index.html file. By mouse scrolling you will run animation and section with
 You can also use menu on top to jump to section that interested you the most. In order to do this you have to hover top menu (the element on very top of screen, normally is a little bit transparent).
 When you click on name of section, the section will appear on your screen.
 
+![When menu is not hovered is a little bit transparent](menu_not_hovered.png)
+When menu is not hovered is a little bit transparent
+
 ![When you hover menu it will be not transparent anymore, so you will see all buttons](menu_hovered.png)
 When you hover menu it will be not transparent anymore, so you will see all buttons
 
