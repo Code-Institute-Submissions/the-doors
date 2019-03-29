@@ -55,11 +55,11 @@ Example of using zoomable class on photo
 Thanks to zoomable class hovering each element makes it bigger so it improve user experience. 
 Classes are in css/style.css file under:
 class zoomable - it allows us to zoom element.
-I prepared 4 clases
-zoomable- makes element 10% bigger
-zoomable-150 - make element even bigger
-zoomable-150 - make element even bigger
-zoomable-200 makes element 2 times bigger
+I prepared 4 clases:
+* zoomable, it makes element 10% bigger
+* zoomable-150, it make element even bigger
+* zoomable-150, it make element even bigger
+* zoomable-200, it makes element 2 times bigger
 
 #### Easy_read
 
@@ -76,12 +76,12 @@ Easy read- it changes colors to black and white when hover in order to make text
 Colors used on project
 
 Web page uses colors that were popular in 60’ , particularly :
-	- burn_sienna 	  #882D17
-	- harvest_gold   #E6A817
-	- avocado 	  #568203
-	- teak 		  #A38B5F
-	- cerulean_blue #2a52be
-	- coppertone 	  #b87333
+	* burn_sienna (#882D17),
+	* harvest_gold (#E6A817),
+	* avocado (#568203),
+	* teak 	(#A38B5F),
+	* cerulean_blue (#2a52be),
+	* coppertone (#b87333),
 The information's about colors I got from this web page: https://juiceboxinteractive.com/blog/color/ 
 
 
@@ -164,8 +164,8 @@ Hovering one card make it bigger and turns its sibling.
 Image of 6st our social media
 
 Here you can find links to:
-	- youtube Chanel of “The Doors” 
-	- twitter about The Doors  
+	* youtube Chanel of “The Doors” 
+	* twitter about The Doors  
 - wikipedia page about them
 
 On very bottom part of the page is cart with my name and mail, I would like to put there also link to my personal page , but it is not ready now. 
