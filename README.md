@@ -237,22 +237,22 @@ I think basamiq could be ok, but
 
 Chosing gimp alowed me to mock-up project quite fast.
 Here you can see all png images of mock-up:
-![Page 1](the doors_mock_up/1.png)
+![Page 1](/the doors_mock_up/1.png)
 Page 1
 
-![Page 2](the doors_mock_up/2.png)
+![Page 2](/the doors_mock_up/2.png)
 Page 2
 
-![Page 3](the doors_mock_up/3.png)
+![Page 3](/the doors_mock_up/3.png)
 Page 3
 
-![Page 4](the doors_mock_up/4.png)
+![Page 4](/the doors_mock_up/4.png)
 Page 4
 
-![Page 5](the doors_mock_up/5.png)
+![Page 5](/the doors_mock_up/5.png)
 Page 5
 
-![Page 6](the doors_mock_up/6.png)
+![Page 6](/the doors_mock_up/6.png)
 Page 6
 
 
