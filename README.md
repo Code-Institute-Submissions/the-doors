@@ -258,7 +258,7 @@ Page 5
 
 ![Page 6](/mock_up/6.png)
 Page 6
-All mock-up files (**.png** and  **gimp .xfc**) are in forder : **mock_up** 
+* All mock-up files (**.png** and  **gimp .xfc**) are in forder : **mock_up** 
 
 ## What next?
 I am not sure if I am going to work on this project after I submit this, but if yes, I would like to :
