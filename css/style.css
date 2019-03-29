@@ -3,6 +3,7 @@
 */
 body{
 	padding-top: 100px;
+  overflow-x: hidden;
 }
 a:hover
 {
@@ -11,6 +12,103 @@ a:hover
 html 
 {
   scroll-behavior: smooth;
+}
+
+/*
+---------------------Colors from 60s---------------------
+
+*/
+/* burn_sienna #882D17 */
+.bg-burn_sienna
+{
+  background-color: #882D17;
+}
+.text-burn_sienna
+{
+  color: #882D17;
+}
+.border-burn_sienna
+{
+  /*border-color: #882D17;*/
+  border:2px solid #882D17;
+}
+/* harvest_gold #E6A817 */
+.bg-harvest_gold
+{
+  background-color: #E6A817;
+}
+.text-harvest_gold
+{
+  color: #E6A817;
+}
+.border-harvest_gold
+{
+  /*border-color: #882D17;*/
+  border:2px solid #E6A817;
+}
+/* avocado #568203 */
+.bg-avocado
+{
+  background-color: #568203;
+}
+.text-avocado
+{
+  color: #568203;
+}
+.border-avocado
+{
+  /*border-color: #882D17;*/
+  border:2px solid #568203;
+}
+/* teak #A38B5F */
+.bg-teak
+{
+  background-color: #A38B5F;
+}
+.text-teak
+{
+  color: #A38B5F;
+}
+.border-teak
+{
+  /*border-color: #882D17;*/
+  border:2px solid #A38B5F;
+}
+/* cerulean_blue #2a52be */
+.bg-cerulean_blue
+{
+  background-color: #2a52be;
+}
+.text-cerulean_blue
+{
+  color: #2a52be;
+}
+.border-cerulean_blue
+{
+  /*border-color: #882D17;*/
+  border:2px solid #2a52be;
+}
+/* coppertone #b87333 */
+.bg-coppertone
+{
+  background-color: #b87333; 
+} 
+.text-coppertone
+{
+  color: #b87333; 
+}
+.border-coppertone
+{
+  /*border-color: #882D17;*/
+  border:2px solid #b87333;
+} 
+/*
+Easy read- it changes colors to black and white when hover in order to make text easier to read
+*/
+.easy_read:hover
+{
+  color:black;
+  background-color: white;
 }
 /*
 ---------------------Navbar classes---------------------
@@ -81,6 +179,14 @@ transition-duration: 3s, 1s;
 transition-property: transform;
 }
 /* zoomable-150 - make element even bigger*/
+.zoomable-125:hover
+{
+transform: scale(1.25) ;
+z-index: +1;
+transition-duration: 3s, 1s;
+transition-property: transform;
+}
+/* zoomable-150 - make element even bigger*/
 .zoomable-150:hover
 {
 transform: scale(1.5) ;
@@ -96,6 +202,7 @@ z-index: +1;
 transition-duration: 3s, 1s;
 transition-property: transform;
 }
+/* makes smaller the element that is sibling of hovered element and is on most left  */
 .smallable_3d_most_left
 {
  -webkit-transform-style: preserve-3d; /* Safari 3-8  */    
@@ -103,6 +210,7 @@ transition-property: transform;
     transform-style: preserve-3d;
     transform: rotateY(80deg);
 }
+/* makes smaller the element that is sibling of hovered element and is on center left (or all element eg. menu on top) */
 .smallable_3d_left
 {
  -webkit-transform-style: preserve-3d; /* Safari 3-8  */    
@@ -110,6 +218,7 @@ transition-property: transform;
     transform-style: preserve-3d;
     transform: rotateY(45deg);
 }
+/* the same as abowe but for right side */
 .smallable_3d_most_right
 {
  -webkit-transform-style: preserve-3d; /* Safari 3-8  */    
@@ -124,6 +233,7 @@ transition-property: transform;
     transform-style: preserve-3d;
     transform: rotateY(335deg);
 }
+/* it makes element just smaller*/
 .smallable
 {
  -webkit-transform-style: preserve-3d; /* Safari 3-8  */    
@@ -132,9 +242,6 @@ transition-property: transform;
     transform: rotateY(335deg);
 }
 
-
-/* some pushing stuff
-*/
 
 
 /* some opacity class*/
@@ -234,8 +341,37 @@ transition-property: transform;
 {
       -webkit-transform: rotateY(90deg); /* Safari */
       transform: rotateY(90deg); /* Standard syntax */
+      -webkit-transform-style: preserve-3d; /* Safari 3-8  */    
+      transform-style: preserve-3d;
+    
+}
+/*
+experimental
+*/
+ @keyframes ani_rotated-90
+{
+    0% {
+      -webkit-transform: rotateY(0deg); /* Safari */
+      transform: rotateY(0deg); /* Standard syntax */
+      -webkit-transform-style: preserve-3d; /* Safari 3-8  */    
+      transform-style: preserve-3d;
+      /*transform: scale(0);*/
+    }
+    100% {
+      opacity: 1;
+      -webkit-transform: rotateY(90deg); /* Safari */
+      transform: rotateY(90deg); /* Standard syntax */
+      -webkit-transform-style: preserve-3d; /* Safari 3-8  */    
+      transform-style: preserve-3d;
+      /*transform: scale(1);*/
+    }
 }
 
+.rotated-100
+{
+      -webkit-transform: rotateY(100deg); /* Safari */
+      transform: rotateY(100deg); /* Standard syntax */
+}
 @keyframes  opacity-anime{
     0% {
       opacity: 0;
@@ -284,15 +420,16 @@ It is used in script.js in $(window).scroll(function(){
  $(window).scroll( in. /js/script.js
 */
     from {
-       -webkit-transform-style: preserve-3d; /* Safari 3-8  */    
-    -webkit-transform: rotateX(80deg); /* Safari 3-8  */
-    transform-style: preserve-3d;
-    transform: rotateX(80deg);
+          -webkit-transform-style: preserve-3d; /* Safari 3-8  */    
+          -webkit-transform: rotateX(80deg) scale(0.5);  /* Safari 3-8  */
+          transform-style: preserve-3d;
+          transform: rotateX(80deg) scale(0.5); 
+          opacity: 0.3;
+
     }
     to {
       opacity: 1;
       transform: scale(1);
-      
     }
 }
 @keyframes  backgound-move
@@ -328,32 +465,4 @@ section
     animation-duration: 60s;
     animation-timing-function: linear;
     animation-iteration-count: infinite;
-}
-
-
-
-    /*
-    for slider History
-    */
-#custom-handle {
-    width: 3em;
-    height: 1.6em;
-    top: 50%;
-    margin-top: -.8em;
-    text-align: center;
-    line-height: 1.6em;
-}
-.d_test {
-  position: absolute;
-  transition: .5s all ease;
-  transform: rotateX(60deg) scale(0.7);
-  perspective: 900px;
-  box-shadow: 0px 20px 50px #555;
-  animation: entry 1s linear 1;
-}
-.d_test:hover {
-  cursor: pointer;
-  transform: rotate(0deg) scale(1) translateY(10px);
-  transition: .5s all ease;
-  z-index: 400;
 }
