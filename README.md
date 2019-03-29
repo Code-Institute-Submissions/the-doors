@@ -2,8 +2,9 @@
 ## What it is?
 It is my 1st project for Code Institute bootcamp. It is front-end only web page about The Doors – rock band from 60’ . 
 
-![Image of 1st section](1.png)
 
+![Image of 1st section](1.png)
+Image of 1st section
 
 ## Target group
 Of course page is design for ‘The Doors’ fun's.  
@@ -23,6 +24,7 @@ For this project I used :
 - Bootstrap – CSS framework
 - Jquery – JS library 
 - Fontawesome – Library for Icons.
+- GIMP - for making graphics (are in xcf files)
 
 ## Installation
 
@@ -75,7 +77,7 @@ The information's about colors I got from this web page: https://juiceboxinterac
 
 
 ![Image of 1st section](2.png)
-
+Image of 1st section
 
 First section is presentation of The Doors members therefore I call this section meet us. 
 Here you can see their photos, position in team  and short text about each of them. Hovering photos shows you alternative phtoto. Hovering text makes it easy to read. 
@@ -98,7 +100,10 @@ I downloaded those photos from internet, removed backgroung in GIMP and export t
 
 ## 2nd section “Our videos”
 
+
 ![Image of 2st our wideos](4.png)
+Image of 2st our wideos
+
 
 I prepared video player that uses videos from youtube. You can watch clips of the doors and read extra informations about songs.  
 On left side (top for smartphones) you can chose song. Each button is zoom-able and has class easy_read. Hovering menu makes it larger and makes video player smaller. 
@@ -117,6 +122,8 @@ Code of videoplayer is in js/script.js file under
 ## 3th section  “Photos”
 
 ![Image of 3st our photos](7.png)
+Image of 3st our photos
+
 Here you can see some photos of ‘The Doors’, hovering each of them changes photo background of section and hides sibling photos. 
 I think that this way of presenting photos is more suitable for older audience with no very excellent IT skills.  Moreover  using this alongside with moving background makes nice visual effect.  
 All gallery you can find in js/script.js file under:
@@ -124,13 +131,17 @@ All gallery you can find in js/script.js file under:
 
 
 ![Image of 3st our photos](5.png)
+Image of 3st our photos
 
 ## 4 th section “Our History”
 ![Image of 4st our history](6.png)
+Image of 4st our history
+
 In this section I present history of “The Doors”. It works similar to video player  , however instead of video it uses text. I am not very familiar with history of music so  I copied parts of articles about The Doors  from Wikipedia.
 
 ## 5th section “Next Event”
 ![Image of 5st next event](8.png)
+Image of 5st next event
 
 Here you can find 2 card- left one is for calendar and right one is for presentation of next event.
 It does not works because it would required some back end, however it is not problem to put there standard Joomla extensions with calendar. 
@@ -138,6 +149,8 @@ Hovering one card make it bigger and turns its sibling.
 
 ## 6th section “Our Social Media”
 ![Image of 6st our social media](9.png)
+Image of 6st our social media
+
 Here you can find links to:
 	- youtube Chanel of “The Doors” 
 	- twitter about The Doors  
