@@ -33,19 +33,26 @@ This version does not required installation, however I would like to make templa
 In order to start webpage open file index.html in web browser (eg. Mozilla,Safari,Chrome,Opera).
 
 
-
 ## Usage
 Open index.html file. By mouse scrolling you will run animation and section with information about The Doors
-###Top menu
-You can also use menu on top to jump to section that interested you the most. In order to do this you have to hover top menu (the element on very top of screen, normally is a little bit transparent) .
-When you click on name of section, the section will appear on your screen. 
+### Top menu
+You can also use menu on top to jump to section that interested you the most. In order to do this you have to hover top menu (the element on very top of screen, normally is a little bit transparent).
+When you click on name of section, the section will appear on your screen.
+
+![When you hover menu it will be not transparent anymore, so you will see all buttons](menu_hovered.png)
+When you hover menu it will be not transparent anymore, so you will see all buttons
+
+![Selected option will change background color to white, font to black and become bigger. Its siblings will turn a littlebit and become smaller](menu_and_button_hovered.png)
+Selected option will change background color to white, font to black and become bigger. Its siblings will turn a littlebit and become smaller
+
 ### Backgrounds
 After section will be fully loaded you will see photo background only. 
 This solution allows you to see everything on photo, because other elements don’t hide the photo content.
 ### Animations
 After scrolling mouse you will see animations of appearing section contentment- I made many css animations classes that you see in /css/css file, however I use mostly wake-up class. 
 Elements are “waking up” -from bottom of pages and are growing a little bit.  
-I think it looks nice especially alongside with photo-background. 
+I think it looks nice especially alongside with photo-background.
+
 ### Hovering, zooming and easy_read
 #### Zoomable
 ![Example of using zoomable class on photo](zoomable_image_example.png)
@@ -115,13 +122,44 @@ Here you can see their photos, position in team  and short text about each of th
 ### Small siblings 
 When you hover one of card the siblings cards will be 3d rotated, each in other direction thanks to class .small_siblings, js functions  from js/script.js file  and many css classes made by me.
 
-Js functions are available in file js/script.js bellowed  :  
-//Set of 3d animations that affect siblings of hovered element 
-css functions are available in file css/style.css bellowed  :
-Small siblings classes
+Js functions are available in file js/script.js bellowed commend  :  
+```javascript
+//  Set of 3d animations that affect siblings of hovered element
+```
+css functions are available in file css/style.css. Example bellowed  :
+```css
+/* makes smaller the element that is sibling of hovered element and is on most left  */
+.smallable_3d_most_left
+{
+ -webkit-transform-style: preserve-3d; /* Safari 3-8  */    
+    -webkit-transform: rotateY(80deg) scale(0.9); /* Safari 3-8  */
+    transform-style: preserve-3d;
+    transform: rotateY(80deg);
+}
+```
 
 ### Moving background
 Photo background of this section is moving from left to right and than back, thank to css class backgound-move in css/style.css.
+```css
+@keyframes  backgound-move
+{
+    /*
+    Animation moves background from LEFT to RIGHT and then again to START point on LEFT side
+    It aplies to every section 
+    */
+    0% {
+      background-position: 0%;
+    }
+    50% {
+      
+      background-position: 100%;
+    }
+    100%{
+      background-position: 0%;   
+    }
+}
+```
+
 
 ### Photos
 I downloaded those photos from internet, removed backgroung in GIMP and export to png file. Therefore they are transparent. 
@@ -143,9 +181,10 @@ Clicking this photo opens it in modal, so you can see this in full-screen mode.
 Buttons previous and next on right and left side of player  load next or previous song when you click at them. 
 
 All video player,menu and scripts are written by me, however I would like change this to script that uses back-end  (likely joomla php is the best solution for this ) 
-Code of videoplayer is in js/script.js file under 
+Code of videoplayer is in js/script.js file under commend:
+```javascript
 // Function for control video section
-
+```
 
 ## 3th section  “Photos”
 
@@ -155,8 +194,9 @@ Image of 3st our photos
 Here you can see some photos of ‘The Doors’, hovering each of them changes photo background of section and hides sibling photos. 
 I think that this way of presenting photos is more suitable for older audience with no very excellent IT skills.  Moreover  using this alongside with moving background makes nice visual effect.  
 All gallery you can find in js/script.js file under:
-//functions for photo gallery
-
+```javascript
+// functions for photo gallery
+```
 
 ![Image of 3st our photos](5.png)
 Image of 3st our photos
