@@ -175,13 +175,13 @@ Image of 2st our wideos
 
 
 I prepared video player that uses videos from youtube. You can watch clips of the doors and read extra informations about songs.  
-On left side (top for smartphones) you can chose song. Each button is zoom-able and has class easy_read. Hovering menu makes it larger and makes video player smaller. 
+On left side (top for smartphones) you can chose song. Each button is **zoom-able** and has class **easy_read**. Hovering menu makes it larger and makes video player smaller. 
 
-On right side (bottom for smartphones) you can find video player as well as links to wikipedia (more informations about song) and songfacts.com  (lyrics and interested facts), all links will open in new tab/window of your web browser.
+On right side (bottom for smartphones) you can find video player as well as links to **wikipedia** (more informations about song) and **songfacts.com**  (lyrics and interested facts), all links will open in new tab/window of your web browser.
 Bellowed this is table with informations and links about song – who is songwriter, release date and many more. Hovering column  of this table change photo on very right side. For example when you hover “Written By:” column you will see photo of song writer next to table. 
-Clicking this photo opens it in modal, so you can see this in full-screen mode.  
+* Clicking this photo opens it in modal, so you can see this in full-screen mode.  
 
-Buttons previous and next on right and left side of player  load next or previous song when you click at them. 
+* Buttons previous and next on right and left side of player  load next or previous song when you click at them. 
 
 All video player,menu and scripts are written by me, however I would like change this to script that uses back-end  (likely joomla php is the best solution for this ) 
 Code of videoplayer is in js/script.js file under commend:
@@ -223,9 +223,9 @@ Hovering one card make it bigger and turns its sibling.
 Image of 6st our social media
 
 Here you can find links to:
-	* youtube Chanel of “The Doors” 
-	* twitter about The Doors  
-- wikipedia page about them
+* youtube Chanel of “The Doors” 
+* twitter about The Doors  
+* wikipedia page about them
 
 On very bottom part of the page is cart with my name and mail, I would like to put there also link to my personal page , but it is not ready now. 
 
@@ -233,7 +233,7 @@ On very bottom part of the page is cart with my name and mail, I would like to p
 
 ## What next?
 I am not sure if I am going to work on this project after I submit this, but if yes, I would like to :
-### add Joomla/Drupal 
+### Joomla/Drupal 
 Change this to Joomla template. It would be nice to have some back-end abilities, such as commends, calendar and adding articles. Right now it is only html/css/js page, so it is useless.
 However, I don’t think it makes sens to use sophisticated frameworks such as Django, Flask or Laravel here. Using ready CMS such as Wordpress, Drupal or Joomla keeps this simply and easy to admin. 
 I have some experience with Joomla, but newer made anything big, so I think it would be easier for me to use this technologies here.
