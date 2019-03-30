@@ -118,7 +118,9 @@ Function above run function isInView() during scrolling. If function isInView re
    		}
 	}
 ```
-Function above checks if element is in view. If yes it returns its id.
+Function above checks if element is in view. If yes it returns its id. 
+Very Important!
+It works only with elements with id 
 
 ### Hovering, zooming and easy_read
 #### Zoomable
@@ -138,6 +140,17 @@ I prepared 4 clases:
 * **zoomable-150**, it make element even bigger
 * **zoomable-150**, it make element even bigger
 * **zoomable-200**, it makes element 2 times bigger
+It is example of zoomable class:
+
+```css
+.zoomable:hover
+{
+transform: scale(1.1) ;
+z-index: +1;
+transition-duration: 3s, 1s;
+transition-property: transform;
+}
+```
 
 #### Easy_read
 
@@ -184,6 +197,26 @@ Image of 1st section
 
 First section is presentation of **The Doors** members therefore I call this section **meet us**. 
 Here you can see their photos, position in team  and short text about each of them. Hovering photos shows you alternative photo. Hovering on text makes it easy to read. 
+
+### How does it works?- alternative photos from section 1
+Here you can code:
+```javascript
+<img class="card-img-top " src="img/Morrison.png" onmouseover="this.src='img/Morrison_morph.png';" onmouseout="this.src='img/Morrison.png';" alt="Card image cap" title="Click to see more">
+```
+Pay attention to 
+```javascript
+onmouseover="this.src='img/Morrison_morph.png';" 
+```
+it changes src of this photo to img/Morrison_morph.png.
+It means that when we hover on this image photowill be change to  img/Morrison_morph.png.
+Ok , so how can we change this to image that was here before? So to src="img/Morrison.png".
+
+The answer is easy:
+
+```javascript
+onmouseout="this.src='img/Morrison.png';"
+```
+Function onmouseout works when we do not hower element, and than it change photos to  img/Morrison.png', so to the same photo as before.
 
 
 
@@ -309,6 +342,29 @@ All gallery functions you can find in **js/script.js** file under:
 
 ![Image of 3st our photos](5.png)
 Image of 3st our photos
+
+### How does it work? - 3th section  “Photos”
+
+```javascript
+$(".set_background").mouseenter(function()
+		{
+			set_bg(this);
+			siblings_invissible(this);
+		});
+```
+
+Hovering on element with class .set_background runs 2 functions : set_bg(this),siblings_invissible(this)
+
+```javascript
+function set_bg(obj_id){
+		link_img =  "url('";
+		link_img += $(obj_id).attr("src");
+		link_img += "')";
+		$(obj_id).parents("section").css("background-image" ,link_img);
+	};
+```
+Function set_bg(this) changes background section to image of element that is parameter of this function (obj_id).
+
 
 ## 4 th section “Our History”
 ![Image of 4st our history](6.png)
