@@ -63,6 +63,62 @@ This solution allows you to see everything on photo, because other elements don�
 After **scrolling mouse** you will see animations of appearing section contentment- I made many css animations classes that you see in **/css/css** file, however I use mostly **wake-up** class. 
 Elements are **“waking up”** -from bottom of pages and are growing a little bit.  
 I think it looks nice especially alongside with photo-background.
+#### How does animation on scroll work?
+I used 2 function in order to load on scroll.
+
+
+```javascript
+// Scroll event - during scrolling elements will apear on screen
+	$(window).scroll(function(){
+		// It gets ID of element by running isInView function 
+   		id_card = isInView($('.show_animation'));
+   		if ( id_card != false )
+   		{
+   			// if element is on screen and has own ID it starts animations (by adding css property to this)
+   			// Animation mentioned above is in style.css file in css directory 
+   			//  apear_from_nowhere in /css/style.css
+   			//alert(id_card);
+    		$("#"+id_card).css("animation-name", "wake_up" );
+			$("#"+id_card).css("animation-duration", "3s");
+			$("#"+id_card).css("animation-timing-function", "ease-in");
+			$("#"+id_card).addClass("opacity-100");	
+			// it removes class "show_animation" in order to avoid errors, and machining next element.
+			// without this function will machining the same element over and over .
+			$("#"+id_card).removeClass("show_animation");		
+			$("#"+id_card).addClass("show_done");		
+					
+   		}	
+	});
+```
+Function above run function isInView() during scrolling. If function isInView returns id of element, this element become animated.  
+
+```javascript
+// it check if element is on screen
+	function isInView(elem){
+		// works only with elements with ID
+   		if($(elem).attr("id")){	
+   			// check if element is on screen
+   			if( $(elem).offset().top - $(window).scrollTop() <= $(elem).outerHeight()*1.2 )
+   			{
+				// if it is it returns its ID, to $(window).scroll()
+				return $(elem).attr("id");
+
+   			}
+   			else
+   			{
+   				// if element is not on screen it stops function and returns FALSE
+   				return false;
+   			}
+   		}
+   		else
+   		{
+   			// if element has no id (likely null or undefinded) it returns FALSE and stops function
+   			//alert($(elem).attr("id"));
+   			return false;
+   		}
+	}
+```
+Function above checks if element is in view. If yes it returns its id.
 
 ### Hovering, zooming and easy_read
 #### Zoomable
