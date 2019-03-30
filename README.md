@@ -428,6 +428,103 @@ Image of 4st our history
 
 In this section I present history of **“The Doors”**. It works similar to video player  , however instead of video it uses text. I am not very familiar with history of music so  I copied parts of articles about **The Doors**  from **Wikipedia**.
 
+### How does it work? Our History
+Here you can find part of function history_menu(id) - it changes text in right card when you click menu button.
+```javascript
+//It takes id
+function history_menu(id)
+{		
+// and do id switching
+  switch(id) {
+  	case 1:
+	// when id is 1 it run this code:
+  		$("#next_year").attr("ref",1);
+  		$("#previous_year").attr("ref",9);
+    		$(".history_title").text("Origins (July 1965 - August 1966)");
+	  	text="The Doors began with a meeting between acquaintances Jim Morrison and Ray Manzarek, ";
+	  	text+="both of whom had attended the UCLA School of Theater, Film and Television, on Venice Beach in July 1965."
+    		$(".history_text").html(text);
+		break;	
+  	case 2:
+	// when id is 2 it run this code:
+  		$("#next_year").attr("ref",2);
+  		$("#previous_year").attr("ref",2);
+    		$(".history_title").text("The Doors and Strange Days (August 1966 - December 1967)");
+		text='The band recorded their first album from August 24 to 31, 1966,'
+ 		text+='at Sunset Sound Recording Studios.'
+    		$(".history_text").html(text);
+		break;
+   	default:
+	// when other this:
+  		$("#next_year").attr("ref",0);
+  		$("#previous_year").attr("ref",9);
+  		$(".history_title").text("History of The Doors");
+  		text= " The Doors were an American rock band formed in Los Angeles in 1965, ";
+  		text+= " with vocalist Jim Morrison, keyboardist Ray Manzarek, guitarist Robby Krieger,";
+    		$(".history_text").html(text);
+	} 
+}
+```
+As you can see in code above everything dependence on id that is parameter of function eg:
+
+```javascript
+history_menu(1)
+```
+runs code that is in 
+```javascript
+case 1:
+```
+
+As you can see I used += command. It could be done in one line, but then text will be very difficult to edit. 
+
+```javascript
+text= " The Doors were an American rock band formed in Los Angeles in 1965, ";
+text+= " with vocalist Jim Morrison, keyboardist Ray Manzarek, guitarist Robby Krieger,";
+```
+Full text will be :
+
+> The Doors were an American rock band formed in Los Angeles in 1965, with vocalist Jim Morrison, keyboardist Ray Manzarek, guitarist Robby Krieger,
+
+Now, after commend:
+```javascript
+$(".history_text").html(text);
+```
+Text on element with class ".history_text" will be the same as text, that we prepared before.
+As you supose ".history_text" is the card on right side. 
+
+What about title?
+Command
+```javascript
+$(".history_title").text("The Doors and Strange Days (August 1966 - December 1967)");
+```
+ changes this, to The Doors and Strange Days (August 1966 - December 1967).
+ 
+ Now question is , where does id parameter come from?
+ ```javascript
+ 	
+	$(".his_menu").click(
+		function(){
+			id=$(this).attr("ref").split("_")
+			history_menu(parseInt(id[0]));
+		});
+		
+```
+As you can see elements with class ".his_menu" have atribute "ref".
+
+eg:
+
+```javascript
+ <li class="his_menu" ref="1_his">  
+              1965-1966
+  </li>
+```
+Atribute ref of this element is "1_his". "His" means that it applies to history menu , and 1 is its id, therefore we do:
+ ```javascript
+id=$(this).attr("ref").split("_")
+```
+It returns array id[1,his]
+Now ne need 1st element , so id[0], but to make sure that it will be int (not string ) I applied function parseInt() 
+ 
 ## 5th section “Next Event”
 ![Image of 5st next event](8.png)
 Image of 5st next event
