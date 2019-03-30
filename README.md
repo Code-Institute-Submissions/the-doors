@@ -1,23 +1,12 @@
 # the-doors
+> Let's Talk About Project.
+> It’s my 1st software developer Project
 ## What it is?
 It is my 1st project for **Code Institute** bootcamp. It is front-end only web page about **The Doors** – rock band from 60’ . 
 
 
 ![Image of 1st section](1.png)
 Image of 1st section
-
-## Target group
-Of course page is design for fun's of **‘The Doors’**.  
-Since **The Doors** is from 60’, oldest users could be even between 70 - 100 years old.
-It means that it is good idea to think about older users during making this project. 
-This is why I made some css and js classes that make page easier to use it for older people (such as **easy_read** and **zoomable** mentioned in following sections of this document.).
-
-However **“The doors”** is still very popular and has significant impact on music nowadays.
-This is why in video player you can find **“Sampled In“**, **“Interpolated By”** and **“Cover By”** sections. It shows how **The Doors** influenced today's  music.
-
-I used many ideas that I found out in other web pages and **awwwards.com** , such as photo background, animations and scrolling control. I think page looks modern and professional .  
-On the other side – **“The Doors”** is rock band from 60’ and therefore I used colors from these years.     
-
 
 ## Technologies that I used
 For this project I used :
@@ -35,6 +24,19 @@ In order to start webpage open file **index.html** in web browser (eg. Mozilla,S
 
 >I strongly recomend using Nexus web browser https://en.wikipedia.org/wiki/WorldWideWeb
 >- It was Joke
+
+## Target group
+Of course page is design for fun's of **‘The Doors’**.  
+Since **The Doors** is from 60’, oldest users could be even between 70 - 100 years old.
+It means that it is good idea to think about older users during making this project. 
+This is why I made some css and js classes that make page easier to use it for older people (such as **easy_read** and **zoomable** mentioned in following sections of this document.).
+
+However **“The doors”** is still very popular and has significant impact on music nowadays.
+This is why in video player you can find **“Sampled In“**, **“Interpolated By”** and **“Cover By”** sections. It shows how **The Doors** influenced today's  music.
+
+I used many ideas that I found out in other web pages and **awwwards.com** , such as photo background, animations and scrolling control. I think page looks modern and professional .  
+On the other side – **“The Doors”** is rock band from 60’ and therefore I used colors from these years.     
+
 
 ## Usage
 Open **index.html** file. By mouse scrolling you will run animation and section with information about **The Doors**
