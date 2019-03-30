@@ -205,6 +205,48 @@ css functions are available in file **css/style.css**. Example bellowed  :
     transform: rotateY(80deg);
 }
 ```
+#### Small siblings - So, how does it work?
+* Each element has class small_siblings and direction class - eg. most_left
+```javascript
+small_siblings most_left
+```
+* When we hover on element we run function $(".small_siblings").hover(
+```javascript
+$(".small_siblings").hover(
+		function(){
+			if ( $(this).hasClass("show_done")  || !$(this).hasClass("show_animation") ) 
+			{
+				un_rotated($(this).siblings(".rotated-10"));
+				make_small($(this).siblings(".no_3d"));
+				make_small_most_left($(this).siblings(".most_left"));
+				make_small_just_left($(this).siblings(".just_left"));
+				make_small_just_right($(this).siblings(".just_right"));
+				make_small_most_right($(this).siblings(".most_right"));
+			}
+		},
+		function(){
+			if ( $(this).hasClass("show_done") || !$(this).hasClass("show_animation")) 
+			{
+				un_make_small($(this).siblings(".no_3d"));
+				un_make_small_most_left($(this).siblings(".most_left"));
+				un_make_small_just_left($(this).siblings(".just_left"));
+				un_make_small_just_right($(this).siblings(".just_right"));
+				un_make_small_most_right($(this).siblings(".most_right"));
+			}
+		});
+
+```
+As you can see - it run different function for each classs. 
+
+
+```javascript
+function make_small_most_left(elem)
+  	{
+  			$(elem).addClass("smallable_3d_most_left",5000, "linear");
+  	}		
+```
+Each function adding css class to element.
+
 
 ### Moving background
 Photo background of this section is moving from left to right and then back, thanks to css class **background-move** in **css/style.css**.
