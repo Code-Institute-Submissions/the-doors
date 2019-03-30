@@ -25,6 +25,9 @@ In order to start webpage open file **index.html** in web browser (eg. Mozilla,S
 >I strongly recomend using Nexus web browser https://en.wikipedia.org/wiki/WorldWideWeb
 >- It was Joke
 
+![Index file (in green area)](install.png)
+Index file (in green area)
+
 ## Target group
 Of course page is design for fun's of **‘The Doors’**.  
 Since **The Doors** is from 60’, oldest users could be even between 70 - 100 years old.
