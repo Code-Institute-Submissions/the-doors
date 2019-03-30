@@ -56,6 +56,59 @@ When you hover menu it will be not transparent anymore, so you will see all butt
 ![Selected option will change background color to white, font to black and become bigger. Its siblings will turn a littlebit and become smaller](menu_and_button_hovered.png)
 Selected option will change background color to white, font to black and become bigger. Its siblings will turn  and become smaller
 
+#### How does it work? Transparent Top menu with slide-in
+It is html code of top-menu (navbar)
+
+```css
+<nav class="navbar navbar-expand-lg bg-harvest_gold fixed-top " id="navbar">
+```
+
+As you can see menu has class navbar. To make it transparent we need change **opacity** of this element in css file. 
+```css
+opacity:0
+```
+Makes that element is invisible,
+```css
+opacity:1
+```
+Makes that element is fully visible
+
+For navbar i used opacity 0.3.
+```css
+.navbar{
+	/*
+It runs animaton slidein for Navbar.
+  */
+opacity:0.3;
+animation-duration: 2s;
+animation-name: slidein;
+} 
+```
+Here you can see 2 more css attributes : 
+```css
+animation-duration: 2s;
+animation-name: slidein;
+```
+
+They run animation with name slidein for 2 seconds:
+```css
+@keyframes slidein {
+  from {
+  /*
+  It moves element from RIGHT to LEFT
+  Applies to Navbar
+  */
+  left: 100%;
+   opacity: 0;
+  }
+
+  to {
+  left: 0%;
+  opacity: 1;
+  }
+}
+```
+
 ### Backgrounds
 After section will be fully loaded you will see **photo background only**. 
 This solution allows you to see everything on photo, because other elements don’t hide the photo content.
@@ -98,7 +151,7 @@ Function above run function isInView() during scrolling. If function isInView re
 		// works only with elements with ID
    		if($(elem).attr("id")){	
    			// check if element is on screen
-   			if( $(elem).offset().top - $(window).scrollTop() <= $(elem).outerHeight()*1.2 )
+   			if( $(elem).offset().top - $(window).scrollTop() <= screen.height )
    			{
 				// if it is it returns its ID, to $(window).scroll()
 				return $(elem).attr("id");
@@ -201,13 +254,18 @@ Here you can see their photos, position in team  and short text about each of th
 ### How does it works?- alternative photos from section 1
 Here you can code:
 ```javascript
-<img class="card-img-top " src="img/Morrison.png" onmouseover="this.src='img/Morrison_morph.png';" onmouseout="this.src='img/Morrison.png';" alt="Card image cap" title="Click to see more">
+<img class="card-img-top " 
+	src="img/Morrison.png" 
+	onmouseover="this.src='img/Morrison_morph.png';"
+	onmouseout="this.src='img/Morrison.png';" 
+	alt="Card image cap" 
+	title="Click to see more">
 ```
 Pay attention to 
 ```javascript
 onmouseover="this.src='img/Morrison_morph.png';" 
 ```
-it changes src of this photo to img/Morrison_morph.png.
+It changes src of this photo to img/Morrison_morph.png.
 It means that when we hover on this image photowill be change to  img/Morrison_morph.png.
 Ok , so how can we change this to image that was here before? So to src="img/Morrison.png".
 
@@ -303,11 +361,9 @@ Photo background of this section is moving from left to right and then back, tha
 }
 ```
 
-
 ### Photos
 I downloaded those photos from internet, removed background in **GIMP** and export to **.png** file. Therefore they are transparent.
 ## 2nd section “Our videos”
-
 
 ![Image of 2st our wideos](4.png)
 Image of 2st our wideos
